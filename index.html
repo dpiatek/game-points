@@ -9,6 +9,56 @@
   </head>
   <body>
 
+    <main class="container-fluid">
+      <div class="row">
+
+        <!-- Main -->
+        <div class="col-sm-8">
+          <h1 class="kp-page-heading">Kahoot! Points</h1>
+
+          <section class="kp-items-container">
+            <h2 class="kp-items-heading">Items</h2>
+            <ul class="kp-items-pads">
+              <li class="kp-item-pad">A</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-sm-4">
+          <h2 class="kp-sidebar-heading">Player Items</h2>
+
+          <table class="kp-score-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Score</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="kp-score-table__pad">A</span>
+                </td>
+                <td>2</td>
+                <td>90</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <section class="kp-summary">
+            <p class="kp-summary__bonuses">Bonuses: 30</p>
+            <div class="kp-summary__total">
+              <p>Total: 140</p>
+              <button type="button" class="btn btn-primary">New Game</button>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </main>
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/app.js"></script>
