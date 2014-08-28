@@ -1,0 +1,8 @@
+{
+  "name": "kahoot-test",
+  "dependencies": {
+    "angular": "~1.2.23",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1"
+  }
+}
