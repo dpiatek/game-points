@@ -1,3 +1,92 @@
-body {
-  background-color: red;
+html, body, .container-fluid, .row, .col-sm-4 { height: 100%; }
+
+.-kp-reset-pad          { padding: 0; }
+.-kp-reset-right-pad    { padding-right: 0; }
+.-kp-reset-margin-right { margin-right: 0; }
+
+.-kp-sidebar {
+  border-left: 2px solid #ddd;
+  padding: 0;
+  position: relative;
+}
+
+.table.-kp-score-table th,
+.table.-kp-score-table td {
+  padding: 18px;
+}
+
+.kp-score-table__pad {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  text-align: center;
+  line-height: 29px;
+  position: relative;
+  top: -4px;
+  font-weight: bold;
+}
+
+.kp-summary {
+  border-top: 2px solid #ddd;
+  padding: 18px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.kp-summary__bonuses {
+  padding: 0 18px 18px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1em;
+  border-bottom: 2px solid #ddd;
+}
+
+.kp-summary__total p {
+  padding: 26px 18px 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.kp-summary__total button {
+  float: right;
+  margin: 18px 18px 0;
+}
+
+.kp-sidebar-heading {
+  margin: 0px;
+  padding: 18px;
+  border-bottom: 2px solid #DDD;
+  line-height: 40px;
+}
+
+.kp-page-heading {
+  margin: 0;
+  padding: 18px;
+  border-bottom: 2px solid #ddd;
+}
+
+.kp-items-container {
+  padding: 18px;
+}
+
+.kp-items-pads {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kp-item-pad {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  border: 2px solid #ddd;
+  text-align: center;
+  line-height: 140px;
+  font-size: 120px;
 }
