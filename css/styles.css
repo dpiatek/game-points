@@ -28,6 +28,7 @@ html, body, .container-fluid, .row, .col-sm-4 { height: 100%; }
 }
 
 .kp-summary {
+  background-color: white;
   border-top: 2px solid #ddd;
   padding: 18px 0;
   width: 100%;
@@ -59,15 +60,16 @@ html, body, .container-fluid, .row, .col-sm-4 { height: 100%; }
 
 .kp-sidebar-heading {
   margin: 0px;
-  padding: 18px;
+  padding: 23px;
   border-bottom: 2px solid #DDD;
-  line-height: 40px;
+  line-height: 1em;
 }
 
 .kp-page-heading {
   margin: 0;
   padding: 18px;
   border-bottom: 2px solid #ddd;
+  line-height: 40px;
 }
 
 .kp-items-container {
