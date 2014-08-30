@@ -1,8 +1,17 @@
 (function() {
   'use strict';
 
-  function UserService() {
+  function UserService(User) {
+    var instance = new User();
 
+    return {
+      get: function() {
+        return instance;
+      },
+      create: function() {
+        instance = new User();
+      }
+    };
   }
 
   var module = angular.module('kahootPoints');
