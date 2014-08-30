@@ -89,4 +89,7 @@ html, body, .container-fluid, .row, .col-sm-4 { height: 100%; }
   text-align: center;
   line-height: 140px;
   font-size: 120px;
+
+.kp-item-pad:active {
+  transform: scale(0.95);
 }
