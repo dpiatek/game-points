@@ -91,7 +91,18 @@ html, body, .container-fluid, .row, .col-sm-4 { height: 100%; }
   text-align: center;
   line-height: 140px;
   font-size: 120px;
+  border-radius: 3px;
+}
 
 .kp-item-pad:active {
   transform: scale(0.95);
+}
+
+.kp-scroller {
+  overflow-y: scroll;
+  position: relative;
+}
+
+.kp-scroller thead {
+  display: none;
 }

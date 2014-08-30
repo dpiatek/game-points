@@ -29,25 +29,26 @@
         <!-- Sidebar -->
         <div class="col-sm-4 -kp-sidebar">
           <h2 class="kp-sidebar-heading">Player Items</h2>
-
-          <table class="table -kp-score-table" ng-controller="ScoreTableController as scoreTable">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Qty</th>
-                <th>Score</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="item in scoreTable.getCollectedItems()">
-                <td>
-                  <span class="kp-score-table__pad">{{ item.label }}</span>
-                </td>
-                <td>{{ scoreTable.getCount(item) }}</td>
-                <td>{{ scoreTable.getTotalValue(item) }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div scroller overlay=".kp-summary">
+            <table class="table -kp-score-table" ng-controller="ScoreTableController as scoreTable">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Score</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in scoreTable.getCollectedItems()">
+                  <td>
+                    <span class="kp-score-table__pad">{{ item.label }}</span>
+                  </td>
+                  <td>{{ scoreTable.getCount(item) }}</td>
+                  <td>{{ scoreTable.getTotalValue(item) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <section class="kp-summary" ng-controller="ScoreSummaryController as scoreSummary">
             <p class="kp-summary__bonuses">Bonuses: {{ scoreSummary.getTotalBonuses() }}</p>
@@ -72,5 +73,6 @@
     <script src="js/lib/models/user.js"></script>
     <script src="js/services/items-service.js"></script>
     <script src="js/services/user-service.js"></script>
+    <script src="js/directives/scroller-directive.js"></script>
   </body>
 </html>
