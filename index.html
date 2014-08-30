@@ -19,7 +19,9 @@
           <section class="kp-items-container" ng-controller="ItemsPadsController as itemsPads">
             <h2 class="kp-items-heading">Items</h2>
             <ul class="kp-items-pads">
-              <li class="kp-item-pad">A</li>
+              <li class="kp-item-pad" ng-repeat="item in itemsPads.items" ng-click="itemsPads.addItem(item)">
+                {{ item.label }}
+              </li>
             </ul>
           </section>
         </div>
@@ -37,21 +39,21 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr ng-repeat="item in scoreTable.getCollectedItems()">
                 <td>
-                  <span class="kp-score-table__pad">A</span>
+                  <span class="kp-score-table__pad">{{ item.label }}</span>
                 </td>
-                <td>2</td>
-                <td>90</td>
+                <td>{{ scoreTable.getCount(item) }}</td>
+                <td>{{ scoreTable.getTotalValue(item) }}</td>
               </tr>
             </tbody>
           </table>
 
           <section class="kp-summary" ng-controller="ScoreSummaryController as scoreSummary">
-            <p class="kp-summary__bonuses">Bonuses: 30</p>
+            <p class="kp-summary__bonuses">Bonuses: {{ scoreSummary.getTotalBonuses() }}</p>
             <div class="kp-summary__total">
-              <button type="button" class="btn btn-primary btn-lg">New Game</button>
-              <p>Total: 140</p>
+              <button type="button" class="btn btn-primary btn-lg" ng-click="scoreSummary.newGame()">New Game</button>
+              <p>Total: {{ scoreSummary.getTotal() }}</p>
             </div>
           </section>
         </div>
